@@ -12,7 +12,7 @@ const uri = process.env.MONGODB_URI;
 mongoose
   .connect(uri)
   .then(() => {
-    console.log("DB Connection Succesfull!");
+    console.log("Yeay!! DB Connection Succesfull!");
   })
   .catch((e) => {
     console.log(e.message);
