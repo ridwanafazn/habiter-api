@@ -8,7 +8,7 @@ exports.getAllTasks = async (req, res) => {
     const tasks = await Task.find({ userId });
     res.json(tasks);
   } catch (error) {
-    res.status(500).json({ message: error.message, error: error });
+    res.status(500).json({ message: error.message });
   }
 };
 
@@ -95,7 +95,7 @@ exports.createTask = async (req, res) => {
     const newTask = await task.save();
     res.status(201).json(newTask);
   } catch (error) {
-    res.status(400).json({ message: error.message, body: req.body });
+    res.status(400).json({ message: error.message });
   }
 };
 
