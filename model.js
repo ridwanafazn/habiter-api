@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const taskSchema = new mongoose.Schema({
-  userId: { type: mongoose.Schema.Types.ObjectId, required: true },
+  userId: { type: String, required: true },
   title: { type: String, required: true },
   type: { type: String, required: true },
   startDate: { type: Date, default: Date.now },
